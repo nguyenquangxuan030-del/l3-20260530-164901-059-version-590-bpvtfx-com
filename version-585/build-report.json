@@ -1,0 +1,24 @@
+{
+  "movies_parsed": 2000,
+  "video_urls_extracted": 150,
+  "unique_video_urls": 20,
+  "detail_pages": 2000,
+  "html_pages": 2015,
+  "categories": {
+    "精选片库": 200,
+    "欧美精选": 200,
+    "热门放映": 200,
+    "经典作品": 200,
+    "新片速递": 200,
+    "剧情故事": 200,
+    "动作奇幻": 200,
+    "喜剧爱情": 200,
+    "悬疑犯罪": 200,
+    "动画剧集": 200
+  },
+  "category_card_count": 2000,
+  "missing_baidu_html": [],
+  "zip_path": "/mnt/data/oumei_jingxuan_static_site.zip",
+  "zip_size": 12248834,
+  "info_chars_read": 13286
+}

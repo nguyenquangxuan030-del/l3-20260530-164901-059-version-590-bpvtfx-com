@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://young-band-ba97.laodayizhi.workers.dev/ads-widget.js"></script>
+<title>搜索影片-欧美精选视频-高清影视片库-高清视频在线观看</title>
+    <meta name="description" content="搜索欧美精选视频高清影视片库，按片名、地区、年份、类型和标签快速查找影片。">
+    <meta name="keywords" content="欧美精选视频,欧美视频,高清影视片库,高清观看,精选视频,热门内容,影片搜索,高清观看">
+    <meta name="robots" content="index,follow">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="assets/js/site.js"></script>
+    <script defer src="assets/data/search-data.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-shell">
+            <a class="brand" href="index.html" aria-label="欧美精选视频首页">
+                <span class="brand-icon">▶</span>
+                <span class="brand-copy">
+                    <strong>欧美精选视频</strong>
+                    <small>高清影视片库</small>
+                </span>
+            </a>
+            <nav class="desktop-nav" aria-label="主导航">
+                <a class="nav-link" href="index.html">首页</a>
+                <div class="nav-dropdown">
+                    <a class="nav-link" href="categories.html">分类总览</a>
+                    <div class="nav-dropdown-panel">
+                        <a href="category-selected-library.html">精选片库</a>
+                        <a href="category-oumei-video.html">欧美精选</a>
+                        <a href="category-hot-release.html">热门放映</a>
+                        <a href="category-classic-cinema.html">经典作品</a>
+                        <a href="category-new-arrival.html">新片速递</a>
+                        <a href="category-story-drama.html">剧情故事</a>
+                        <a href="category-action-fantasy.html">动作奇幻</a>
+                        <a href="category-comedy-romance.html">喜剧爱情</a>
+                        <a href="category-suspense-crime.html">悬疑犯罪</a>
+                        <a href="category-animation-series.html">动画剧集</a>
+                    </div>
+                </div>
+                <a class="nav-link" href="rankings.html">排行榜</a>
+                <a class="nav-link is-active" href="search.html">搜索</a>
+            </nav>
+            <form class="nav-search" action="search.html" method="get">
+                <input type="search" name="q" placeholder="搜索片名 / 地区 / 标签" aria-label="搜索影片">
+                <button type="submit" aria-label="提交搜索">⌕</button>
+            </form>
+            <button class="mobile-menu-button" type="button" aria-label="打开菜单" data-mobile-menu-button>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-panel" data-mobile-panel>
+            <form class="mobile-search" action="search.html" method="get">
+                <input type="search" name="q" placeholder="搜索影片">
+                <button type="submit">搜索</button>
+            </form>
+            <nav class="mobile-nav" aria-label="移动端导航">
+                <a href="index.html">首页</a>
+                <a href="categories.html">分类总览</a>
+                <a href="rankings.html">排行榜</a>
+                <a href="search.html">搜索</a>
+                    <a href="category-selected-library.html">精选片库</a>
+                    <a href="category-oumei-video.html">欧美精选</a>
+                    <a href="category-hot-release.html">热门放映</a>
+                    <a href="category-classic-cinema.html">经典作品</a>
+                    <a href="category-new-arrival.html">新片速递</a>
+                    <a href="category-story-drama.html">剧情故事</a>
+                    <a href="category-action-fantasy.html">动作奇幻</a>
+                    <a href="category-comedy-romance.html">喜剧爱情</a>
+                    <a href="category-suspense-crime.html">悬疑犯罪</a>
+                    <a href="category-animation-series.html">动画剧集</a>
+            </nav>
+        </div>
+    </header>
+    <main class="page-main">
+        <section class="page-hero small-hero">
+            <div class="container">
+                <span class="hero-kicker">搜索</span>
+                <h1>搜索高清影视片库</h1>
+                <p>输入片名、地区、类型、年份或标签，即可在 2000 部影片中快速查找。</p>
+                <form class="search-page-form" id="searchPageForm" action="search.html" method="get">
+                    <input type="search" name="q" id="searchPageInput" placeholder="例如：美国 / 动作 / 2024 / 家庭">
+                    <button type="submit">搜索</button>
+                </form>
+            </div>
+        </section>
+        <section class="content-section search-results-section">
+            <div class="section-heading">
+                <div>
+                    <h2>搜索结果</h2>
+                    <p id="searchResultSummary">请输入关键词开始搜索。</p>
+                </div>
+            </div>
+            <div class="movie-grid large-grid" id="searchResults"></div>
+        </section>
+        <section class="content-section">
+            <div class="section-heading">
+                <div>
+                    <h2>热门入口</h2>
+                    <p>没有输入关键词时，可先浏览以下推荐影片。</p>
+                </div>
+            </div>
+            <div class="movie-grid">
+                <article class="movie-card" data-search="火山大灾难 美国 电影 2024 动作 / 灾难 经典作品 特效大片 逃生 科学家 亲情 火山灰">
+                    <a class="poster-frame" href="movies/movie-0001.html" data-title="火山大灾难">
+                        <img src="1.jpg" alt="火山大灾难" loading="lazy">
+                        <span class="poster-overlay">立即观看</span>
+                        <span class="year-badge">2024</span>
+                    </a>
+                    <div class="movie-card-body">
+                        <a class="movie-title" href="movies/movie-0001.html">火山大灾难</a>
+                        <p>黄石火山爆发前24小时，一个不信科学的网红博主和她的火山学家父亲，必须穿越地狱般的岩浆区，发布那条能救下百万人命的警报。</p>
+                        <div class="card-meta">
+                            <span>美国</span>
+                            <span>电影</span>
+                        </div>
+                        <a class="category-pill" href="category-classic-cinema.html">经典作品</a>
+                    </div>
+                </article>
+                <article class="movie-card" data-search="乱马1/2第二季 日本 动画剧集 2024 喜剧、动作、恋爱 动画剧集 性别转换 格斗 高桥留美子">
+                    <a class="poster-frame" href="movies/movie-0002.html" data-title="乱马1/2第二季">
+                        <img src="2.jpg" alt="乱马1/2第二季" loading="lazy">
+                        <span class="poster-overlay">立即观看</span>
+                        <span class="year-badge">2024</span>
+                    </a>
+                    <div class="movie-card-body">
+                        <a class="movie-title" href="movies/movie-0002.html">乱马1/2第二季</a>
+                        <p>早乙女乱马的新学期遇到了新对手：一个能在男女性别间随意切换的天才转校生。</p>
+                        <div class="card-meta">
+                            <span>日本</span>
+                            <span>动画剧集</span>
+                        </div>
+                        <a class="category-pill" href="category-animation-series.html">动画剧集</a>
+                    </div>
+                </article>
+                <article class="movie-card" data-search="检察官内传 韩国 电视剧 2024 剧情， 职业， 犯罪 精选片库 职场群像 基层反腐 黑色幽默 法理人情 单元剧">
+                    <a class="poster-frame" href="movies/movie-0003.html" data-title="检察官内传">
+                        <img src="3.jpg" alt="检察官内传" loading="lazy">
+                        <span class="poster-overlay">立即观看</span>
+                        <span class="year-badge">2024</span>
+                    </a>
+                    <div class="movie-card-body">
+                        <a class="movie-title" href="movies/movie-0003.html">检察官内传</a>
+                        <p>地方支厅刑事一部的一群“非典型”检察官，在食堂比在法庭上更常上演唇枪舌战。</p>
+                        <div class="card-meta">
+                            <span>韩国</span>
+                            <span>电视剧</span>
+                        </div>
+                        <a class="category-pill" href="category-selected-library.html">精选片库</a>
+                    </div>
+                </article>
+                <article class="movie-card" data-search="一千零二夜 法国 / 摩洛哥 电影 2026 奇幻, 动画, 冒险 悬疑犯罪 阿拉伯 女性 神话 反殖民">
+                    <a class="poster-frame" href="movies/movie-0004.html" data-title="一千零二夜">
+                        <img src="4.jpg" alt="一千零二夜" loading="lazy">
+                        <span class="poster-overlay">立即观看</span>
+                        <span class="year-badge">2026</span>
+                    </a>
+                    <div class="movie-card-body">
+                        <a class="movie-title" href="movies/movie-0004.html">一千零二夜</a>
+                        <p>《一千零一夜》之后，聪慧的少女为拯救被欧洲殖民者偷走故事的阿拉伯世界，踏上寻找最后一盏神灯的口述旅程。</p>
+                        <div class="card-meta">
+                            <span>法国 / 摩洛哥</span>
+                            <span>电影</span>
+                        </div>
+                        <a class="category-pill" href="category-suspense-crime.html">悬疑犯罪</a>
+                    </div>
+                </article>
+                <article class="movie-card" data-search="生命序曲 英国 电影 2014 剧情, 音乐, 传记 热门放映 天才少女 大提琴 母女关系">
+                    <a class="poster-frame" href="movies/movie-0005.html" data-title="生命序曲">
+                        <img src="5.jpg" alt="生命序曲" loading="lazy">
+                        <span class="poster-overlay">立即观看</span>
+                        <span class="year-badge">2014</span>
+                    </a>
+                    <div class="movie-card-body">
+                        <a class="movie-title" href="movies/movie-0005.html">生命序曲</a>
+                        <p>四岁的音乐神童被确诊为渐冻症，她的母亲决定用最后的时间陪她录完十首“生命乐章”。</p>
+                        <div class="card-meta">
+                            <span>英国</span>
+                            <span>电影</span>
+                        </div>
+                        <a class="category-pill" href="category-hot-release.html">热门放映</a>
+                    </div>
+                </article>
+                <article class="movie-card" data-search="北京·夜 中国大陆 电影 2019 剧情 / 文艺 新片速递 都市情感 多线叙事 社会现实">
+                    <a class="poster-frame" href="movies/movie-0006.html" data-title="北京·夜">
+                        <img src="6.jpg" alt="北京·夜" loading="lazy">
+                        <span class="poster-overlay">立即观看</span>
+                        <span class="year-badge">2019</span>
+                    </a>
+                    <div class="movie-card-body">
+                        <a class="movie-title" href="movies/movie-0006.html">北京·夜</a>
+                        <p>北京的五个夜晚，五组不同阶层的人物，因一辆失控的网约车而命运交错。</p>
+                        <div class="card-meta">
+                            <span>中国大陆</span>
+                            <span>电影</span>
+                        </div>
+                        <a class="category-pill" href="category-new-arrival.html">新片速递</a>
+                    </div>
+                </article>
+                <article class="movie-card" data-search="刺激1998 美国 电影 1998 犯罪， 剧情 精选片库 越狱 复仇 律师 悬疑 反转">
+                    <a class="poster-frame" href="movies/movie-0007.html" data-title="刺激1998">
+                        <img src="7.jpg" alt="刺激1998" loading="lazy">
+                        <span class="poster-overlay">立即观看</span>
+                        <span class="year-badge">1998</span>
+                    </a>
+                    <div class="movie-card-body">
+                        <a class="movie-title" href="movies/movie-0007.html">刺激1998</a>
+                        <p>精英律师被判终身监禁，他用六年设了一个局，让典狱长求他越狱。</p>
+                        <div class="card-meta">
+                            <span>美国</span>
+                            <span>电影</span>
+                        </div>
+                        <a class="category-pill" href="category-selected-library.html">精选片库</a>
+                    </div>
+                </article>
+                <article class="movie-card" data-search="抓住你的衣领 韩国 剧集 2025 悬疑, 爱情, 职场 精选片库 记者 连环杀人 契约恋爱 猫鼠游戏">
+                    <a class="poster-frame" href="movies/movie-0008.html" data-title="抓住你的衣领">
+                        <img src="8.jpg" alt="抓住你的衣领" loading="lazy">
+                        <span class="poster-overlay">立即观看</span>
+                        <span class="year-badge">2025</span>
+                    </a>
+                    <div class="movie-card-body">
+                        <a class="movie-title" href="movies/movie-0008.html">抓住你的衣领</a>
+                        <p>电视台王牌女主播发现自己的“绯闻男友”是连环杀人魔，为了抢独家，她决定先不报警，而是假装更爱他。</p>
+                        <div class="card-meta">
+                            <span>韩国</span>
+                            <span>剧集</span>
+                        </div>
+                        <a class="category-pill" href="category-selected-library.html">精选片库</a>
+                    </div>
+                </article>
+                <article class="movie-card" data-search="陌生人的爱 中国大陆 电影 2019 剧情 / 家庭 喜剧爱情 留守儿童 支教老师 非血缘亲情 催泪 山村">
+                    <a class="poster-frame" href="movies/movie-0009.html" data-title="陌生人的爱">
+                        <img src="9.jpg" alt="陌生人的爱" loading="lazy">
+                        <span class="poster-overlay">立即观看</span>
+                        <span class="year-badge">2019</span>
+                    </a>
+                    <div class="movie-card-body">
+                        <a class="movie-title" href="movies/movie-0009.html">陌生人的爱</a>
+                        <p>一个患上绝症的都市富家女，隐瞒身份去山村支教，与一群留守儿童缔结了超越血缘的生死亲情。</p>
+                        <div class="card-meta">
+                            <span>中国大陆</span>
+                            <span>电影</span>
+                        </div>
+                        <a class="category-pill" href="category-comedy-romance.html">喜剧爱情</a>
+                    </div>
+                </article>
+                <article class="movie-card" data-search="吸血街头 中国香港 电影 1995 恐怖、动作、犯罪 热门放映 吸血鬼 黑帮 港产cult 血浆 江湖">
+                    <a class="poster-frame" href="movies/movie-0010.html" data-title="吸血街头">
+                        <img src="10.jpg" alt="吸血街头" loading="lazy">
+                        <span class="poster-overlay">立即观看</span>
+                        <span class="year-badge">1995</span>
+                    </a>
+                    <div class="movie-card-body">
+                        <a class="movie-title" href="movies/movie-0010.html">吸血街头</a>
+                        <p>午夜旺角，几名黑帮马仔被咬后变成吸血鬼，但他们没有统治世界，而是抢地盘、追靓女、继续收保护费。</p>
+                        <div class="card-meta">
+                            <span>中国香港</span>
+                            <span>电影</span>
+                        </div>
+                        <a class="category-pill" href="category-hot-release.html">热门放映</a>
+                    </div>
+                </article>
+                <article class="movie-card" data-search="我对你有感觉 中国香港 电影 2024 爱情, 剧情 动作奇幻 都市情感 暧昧 现实向">
+                    <a class="poster-frame" href="movies/movie-0011.html" data-title="我对你有感觉">
+                        <img src="11.jpg" alt="我对你有感觉" loading="lazy">
+                        <span class="poster-overlay">立即观看</span>
+                        <span class="year-badge">2024</span>
+                    </a>
+                    <div class="movie-card-body">
+                        <a class="movie-title" href="movies/movie-0011.html">我对你有感觉</a>
+                        <p>他和她做了十年同事、七年饭搭子，所有人都觉得他们该在一起，除了他们自己。</p>
+                        <div class="card-meta">
+                            <span>中国香港</span>
+                            <span>电影</span>
+                        </div>
+                        <a class="category-pill" href="category-action-fantasy.html">动作奇幻</a>
+                    </div>
+                </article>
+                <article class="movie-card" data-search="惊声尖叫2 美国 电影 2025 恐怖 / 悬疑 悬疑犯罪 续集 元恐怖 面具杀手 影迷 反转">
+                    <a class="poster-frame" href="movies/movie-0012.html" data-title="惊声尖叫2">
+                        <img src="12.jpg" alt="惊声尖叫2" loading="lazy">
+                        <span class="poster-overlay">立即观看</span>
+                        <span class="year-badge">2025</span>
+                    </a>
+                    <div class="movie-card-body">
+                        <a class="movie-title" href="movies/movie-0012.html">惊声尖叫2</a>
+                        <p>第一部大屠杀的幸存者参加恐怖电影粉丝见面会，却发现杀手换上了新面具，并按照恐怖片续集的“规则”开始新的屠杀。</p>
+                        <div class="card-meta">
+                            <span>美国</span>
+                            <span>电影</span>
+                        </div>
+                        <a class="category-pill" href="category-suspense-crime.html">悬疑犯罪</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <section>
+                <div class="footer-brand">
+                    <span class="brand-icon">▶</span>
+                    <strong>欧美精选视频</strong>
+                </div>
+                <p>整理欧美精选视频栏目，涵盖热门内容、经典作品和多类型分类。</p>
+                <p class="footer-count">当前静态片库共收录 2000 部影片。</p>
+            </section>
+            <section>
+                <h2>站点导航</h2>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="categories.html">分类总览</a></li>
+                    <li><a href="rankings.html">排行榜</a></li>
+                    <li><a href="search.html">搜索影片</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>精选分类</h2>
+                <ul>
+                        <li><a href="category-selected-library.html">精选片库</a></li>
+                        <li><a href="category-oumei-video.html">欧美精选</a></li>
+                        <li><a href="category-hot-release.html">热门放映</a></li>
+                        <li><a href="category-classic-cinema.html">经典作品</a></li>
+                        <li><a href="category-new-arrival.html">新片速递</a></li>
+                        <li><a href="category-story-drama.html">剧情故事</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>浏览提示</h2>
+                <p>所有影片详情、简介、标签与推荐链接均已写入静态 HTML，支持电脑与手机访问。</p>
+            </section>
+        </div>
+    </footer>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?60fa60a3da050a73eefefaaebe0afaf5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
